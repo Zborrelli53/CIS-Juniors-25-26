@@ -1,0 +1,180 @@
+/*================================= 
+Reset & Base Styles
+==================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* ======================
+Header Styles
+=======================*/
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/*======================================
+Mobile Styles (Default - No Media Query)
+Single column layout for phones
+=======================================*/
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 column */
+    gap: 20px;
+    max-width: 1200px;
+    padding: 0 10px;
+}
+
+/*==================
+Card Specific Styles
+===================*/
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    /* object-fit: cover ensures images fill the space without distortion*/
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #333333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    /* Higher line-height improves readability */
+}
+
+.card button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%; /* Full width button on mobile */
+}
+
+.card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.3);
+}
+
+/*===================================
+FOOTER STYLES
+===================================*/
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+/*============================================
+TABLET STYLES
+2 column layout for tablets (768px and wider)
+============================================*/
+@media (min-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr 1fr; /* Tablet: 2 columns*/
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .card button {
+        width: auto; /* Button no longer full width */
+        padding: 12px 32px;
+    }
+
+
+} /* Closing Tablet Media Query */
+
+/*===============================================
+DESKTOP STYLES 
+3 column layout for desktops (1024px and wider)
+===============================================*/
+
+@media (min-width: 1024px) {
+
+    .card-container {
+        grid-template-columns: 1fr 1fr 1fr; /* Desktop: 3 columns */
+        gap: 30px;
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .card img {
+        height: 200px;
+        /* Slightly smaller images on desktio for better proportions */
+    }
+
+}
+
+/*==================================================
+RESPONSIVE TYPOGRAPHY
+Adjust font sizes for better readability
+==================================================*/
+
+
+/*=================================================
+PRINT STYLES
+For when you want to print a page
+=================================================*/
